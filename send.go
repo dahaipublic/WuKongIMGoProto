@@ -19,7 +19,7 @@ type SendPacket struct {
 	ChannelType uint8  // 频道类型（1.个人 2.群组）
 	Topic       string // 消息topic
 	Payload     []byte // 消息内容
-
+	IsDelete    bool   `json:"is_delete"` // 是否删除
 }
 
 func (s *SendPacket) UniqueKey() string {

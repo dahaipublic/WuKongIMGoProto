@@ -37,6 +37,7 @@ type RecvPacket struct {
 
 	// ---------- 以下不参与编码 ------------
 	ClientSeq uint64 // 客户端提供的序列号，在客户端内唯一
+	IsDelete  bool   `json:"is_delete"` // 是否删除
 }
 
 func (r *RecvPacket) Reset() {
